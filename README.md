@@ -1,9 +1,9 @@
-# Diss
+# Dissertation
 
 This is my Research Project: Effectiveness of multi-scaling keypoints for Sign Language Translation
 
 The dataset can be downloaded is PHOENIX14T dataset: https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/ 
-
+Due to size constraints: Example data can be found at the ExampleData Foulder
 
 
 
@@ -22,7 +22,9 @@ The code consists of Three sections:
 Remark: Each word containts its own Liscene and its respective Readme File.
 
 To run the progressive Transformer: 
-- Run the training.py file in the Progressive Transformer folder
+- Directories of the config needs to be changed
+- Change the scaling for dw_plot_video.py
+- Run the training.py file in the Progressive Transformer folder ( make sure the correct config is utilised )
 - A sample config is also uploaded for reference
 
 
