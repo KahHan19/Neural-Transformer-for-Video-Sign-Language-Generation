@@ -6,7 +6,7 @@ The dataset can be downloaded is PHOENIX14T dataset: https://www-i6.informatik.r
 Due to size constraints: Example data can be found at the ExampleData Foulder
 
 
-
+https://github.com/KahHan19/Diss/blob/main/wetter_wie-aussehen_morgen_28_78.mp4
 
 
 
