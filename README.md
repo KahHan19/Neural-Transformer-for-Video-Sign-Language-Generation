@@ -33,6 +33,8 @@ To run the progressive Transformer:
 - Then put all the files into the sign_data foulder in Progressive Transformer folder. (adjust the dw_plot_video.py scaling value according to the normalisation done to keypoints)
 - Run the training.py file in the Progressive Transformer folder ( make sure the correct config is utilised, can seen in the #Change here# section)
 
+
+- Remark: dw_plot_video.py is important for drawing skeleton poses for DWPose, it uses code form rtmlib( https://github.com/Tau-J/rtmlib ) and implemented in a way to be compatible with the transformer.
 # Citation        
     @misc{rtmlib,
       title={rtmlib},
