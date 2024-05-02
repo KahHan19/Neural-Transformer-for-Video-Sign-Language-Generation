@@ -37,6 +37,10 @@ To run the progressive Transformer:
 
 
 - Remark: dw_plot_video.py is important for drawing skeleton poses for DWPose, it uses code form rtmlib( https://github.com/Tau-J/rtmlib ) and implemented in a way to be compatible with the transformer.
+
+
+Code resource used is all from the code cited below: 
+
 # Citation        
     @misc{rtmlib,
       title={rtmlib},
