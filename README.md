@@ -27,11 +27,11 @@ To run the progressive Transformer:
 - Each folder contain its own set of requirements.txt folder. To run the code, all the required libraries first need to be downloaded.
 - First download the Pheonix14T dataset. 
 - To perform DWPose Pose estimation run the DWPose_estimator.py file located in DWPose_RTMB. ( or you can run the "demo.ipynb" file on a single image, an image from Pheonix14T is also included for testing if interested )
-- Ensure that the skeleton poses is in a file ending with ".skels", this is similar to the Progressive transformer code.
-- Pass the Skeleton ".skels" file into the counter_embedding.py file to perform counter embedding
-- Then finally adjust the configuration file as needed, make sure that you have skels, file and .gloss for all training, validation and test set (as shown in the ExampleData folder)
+- Ensure that the skeleton poses is in a file ending with ".skels", further instruction is in Progressive transformer foulder.
+- Pass the Skeleton ".skels" file into the counter_embedding.py file to perform counter embedding, make sure to do this for each dataset. 
+- Then finally adjust the configuration file as needed, make sure that you have skels, .file and .gloss for all training, validation and test set (as shown in the ExampleData folder)
 - Then put all the files into the sign_data foulder in Progressive Transformer folder. (adjust the dw_plot_video.py scaling value according to the normalisation done to keypoints)
-- Run the training.py file in the Progressive Transformer folder ( make sure the correct config is utilised )
+- Run the training.py file in the Progressive Transformer folder ( make sure the correct config is utilised, can seen in the #Change here# section)
 
 # Citation        
     @misc{rtmlib,
