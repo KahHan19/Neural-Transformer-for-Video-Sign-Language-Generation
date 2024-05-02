@@ -42,3 +42,22 @@ bibliography:
           archivePrefix={arXiv},
           primaryClass={cs.CV}
     }
+
+    @inproceedings{saunders2020progressive,
+    	title		=	{{Progressive Transformers for End-to-End Sign Language Production}},
+    	author		=	{Saunders, Ben and Camgoz, Necati Cihan and Bowden, Richard},
+    	booktitle   	=   	{Proceedings of the European Conference on Computer Vision (ECCV)},
+    	year		=	{2020}}
+    
+    @inproceedings{saunders2020adversarial,
+    	title		=	{{Adversarial Training for Multi-Channel Sign Language Production}},
+    	author		=	{Saunders, Ben and Camgoz, Necati Cihan and Bowden, Richard},
+    	booktitle   	=   	{Proceedings of the British Machine Vision Conference (BMVC)},
+    	year		=	{2020}}
+    
+    @inproceedings{saunders2021continuous,
+    	title		=	{{Continuous 3D Multi-Channel Sign Language Production via Progressive Transformers and Mixture Density Networks}},
+    	author		=	{Saunders, Ben and Camgoz, Necati Cihan and Bowden, Richard},
+    	booktitle   	=   	{International Journal of Computer Vision (IJCV)},
+    	year		=	{2021}}
+
