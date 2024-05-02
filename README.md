@@ -20,9 +20,9 @@ The code consists of Three sections:
 
 - DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment.
 
-- Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer to make it DWPose compatible
+- Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer(saunders2020progressive) to make it DWPose compatible
 
-Remark: Each word containts its own Liscene and its respective Readme File.
+Remark: Each word containts its own Liscene and its respective Readme File. Though the main model is based on Progressive Transformer(saunders2020progressive), we used some of the code from https://github.com/adamg4911/diss by Adam George.
 
 To run the progressive Transformer: 
 - Directories of the config needs to be changed
