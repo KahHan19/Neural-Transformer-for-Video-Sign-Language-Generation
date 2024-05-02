@@ -15,7 +15,7 @@ The code consists of Three sections:
 
     - Counter_embedding: Add Counter Values in the skeleton keypoints estimates
 
-    - DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment ).
+    - DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment.
 
     - Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer to make it DWPose compatible
 
@@ -72,3 +72,10 @@ To run the progressive Transformer:
     	booktitle   	=   	{International Journal of Computer Vision (IJCV)},
     	year		=	{2021}}
 
+
+    @misc{diss,
+      author = {Gonzalez, Adam},
+      title = {diss},
+      howpublished = {\url{https://github.com/adamg4911/diss}},
+      year = {2023},
+    }
