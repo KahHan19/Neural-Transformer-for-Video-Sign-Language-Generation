@@ -26,8 +26,7 @@ To run the progressive Transformer:
 - A sample config is also uploaded for reference
 
 
-bibliography: 
-        
+# Citation        
     @misc{rtmlib,
       title={rtmlib},
       author={Jiang, Tao},
