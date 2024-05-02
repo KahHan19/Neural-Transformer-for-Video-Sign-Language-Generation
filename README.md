@@ -15,21 +15,23 @@ Due to size constraints: Example data can be found at the ExampleData Foulder.
 
 # Information about the Code
 The code consists of Three sections:
+- DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with our project.
 
-- Counter_embedding: Add Counter Values in the skeleton keypoints estimates
+- Counter_embedding: Add Counter Values in the skeleton keypoints estimates (This is done right after pose estimation for the dataset)
 
-- DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment.
+- Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer(saunders2020progressive) to make it DWPose compatible.
 
-- Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer(saunders2020progressive) to make it DWPose compatible
-
-Remark: Each word containts its own Liscene and its respective Readme File. Though the main model is based on Progressive Transformer(saunders2020progressive), we used some of the code from https://github.com/adamg4911/diss by Adam George.
+Remark: Each work contains its own Liscene and Readme File. Though the main model is based on Progressive Transformer(saunders2020progressive), we used some of the code from https://github.com/adamg4911/diss by Adam George.
 
 To run the progressive Transformer: 
-- Directories of the config needs to be changed
-- Change the scaling for dw_plot_video.py
+- Each folder contain its own set of requirements.txt folder. To run the code, all the required libraries first need to be downloaded.
+- First download the Pheonix14T dataset. 
+- To perform DWPose Pose estimation run the DWPose_estimator.py file located in DWPose_RTMB. ( or you can run the "demo.ipynb" file on a single image, an image from Pheonix14T is also included for testing if interested )
+- Ensure that the skeleton poses is in a file ending with ".skels", this is similar to the Progressive transformer code.
+- Pass the Skeleton ".skels" file into the counter_embedding.py file to perform counter embedding
+- Then finally adjust the configuration file as needed, make sure that you have skels, file and .gloss for all training, validation and test set (as shown in the ExampleData folder)
+- Then put all the files into the sign_data foulder in Progressive Transformer folder. (adjust the dw_plot_video.py scaling value according to the normalisation done to keypoints)
 - Run the training.py file in the Progressive Transformer folder ( make sure the correct config is utilised )
-- A sample config is also uploaded for reference
-
 
 # Citation        
     @misc{rtmlib,
