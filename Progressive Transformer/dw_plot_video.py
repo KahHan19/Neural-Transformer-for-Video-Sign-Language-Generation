@@ -42,9 +42,11 @@ def plot_video(joints,
         frame = np.zeros((650, 650, 3), np.uint8) * 255
 
         # Cut off the percent_tok, multiply by 3 to restore joint size
-        # TODO - Remove the *3 if the joints weren't divided by 3 in data creation
         frame_joints = frame_joints[:-1]
 
+
+
+        # Change the Scaling Here #
         for i, value in enumerate(frame_joints):
             if i in range(45,181):
                 frame_joints[i] = value
@@ -71,9 +73,10 @@ def plot_video(joints,
             # Initialise frame of white
             ref_frame = np.zeros((650, 650, 3), np.uint8)
 
-            # Cut off the percent_tok and multiply each joint by 3 (as was reduced in training files)
             ref_joints = ref_joints[:-1]
 
+
+        # Change the Scaling Here #
             for i, value in enumerate(ref_joints):
                 if i in range(45,181):
                     ref_joints[i] = value
