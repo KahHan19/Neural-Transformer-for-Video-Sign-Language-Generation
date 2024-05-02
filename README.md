@@ -1,4 +1,4 @@
-# Diss
+# Dissertation
 
 This is my Research Project: Effectiveness of multi-scaling keypoints for Sign Language Translation
 
