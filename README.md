@@ -2,20 +2,31 @@
 
 This is my Research Project: Effectiveness of multi-scaling keypoints for Sign Language Translation
 
+The dataset can be downloaded is PHOENIX14T dataset: https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/ 
 
 
 
 
-The code consist of Three sections:
 
-    - Counter_embedding: Add Counter Values in the the skeleton keypoints estimates
 
-    - DWPose_RTMB: Which is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment ).
 
-    - Proggressive Transformer: Adjusted version of Ben Saunders Progressive Transformer to make it DWPose compatible
 
-bibliography: 
-        
+The code consists of Three sections:
+
+    - Counter_embedding: Add Counter Values in the skeleton keypoints estimates
+
+    - DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment.
+
+    - Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer to make it DWPose compatible
+
+Remark: Each word containts its own Liscene and its respective Readme File.
+
+To run the progressive Transformer: 
+- Run the training.py file in the Progressive Transformer folder
+- A sample config is also uploaded for reference
+
+
+# Citation        
     @misc{rtmlib,
       title={rtmlib},
       author={Jiang, Tao},
@@ -61,3 +72,10 @@ bibliography:
     	booktitle   	=   	{International Journal of Computer Vision (IJCV)},
     	year		=	{2021}}
 
+
+    @misc{diss,
+      author = {Gonzalez, Adam},
+      title = {diss},
+      howpublished = {\url{https://github.com/adamg4911/diss}},
+      year = {2023},
+    }
