@@ -16,11 +16,11 @@ Due to size constraints: Example data can be found at the ExampleData Foulder.
 # Information about the Code
 The code consists of Three sections:
 
-    - Counter_embedding: Add Counter Values in the skeleton keypoints estimates
+- Counter_embedding: Add Counter Values in the skeleton keypoints estimates
 
-    - DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment.
+- DWPose_RTMB: This is the rtmlib from Jiang, Tao (https://github.com/Tau-J/rtmlib) This part of the code is to perform DWPose and draw the skeletal keypoints for the poses. Do know that the code was also changed to make it compatible with the assingment.
 
-    - Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer to make it DWPose compatible
+- Progressive Transformer: Adjusted version of Ben Saunders Progressive Transformer to make it DWPose compatible
 
 Remark: Each word containts its own Liscene and its respective Readme File.
 
