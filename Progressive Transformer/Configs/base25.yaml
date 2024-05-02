@@ -1,0 +1,63 @@
+data:
+  dev: ./sign_data/face/valid
+  files: files
+  max_sent_length: 80
+  skip_frames: 2
+  src: gloss
+  src_vocab: ./sign_data/src.txt
+  test: ./sign_data/face/testv2
+  train: ./sign_data/face/train
+  trg: skels
+model:
+  bias_initializer: zeros
+  decoder:
+    dropout: 0.0
+    embeddings:
+      dropout: 0.0
+      embedding_dim: 256
+    ff_size: 1024
+    hidden_size: 256
+    num_heads: 4
+    num_layers: 1
+    type: transformer
+  embed_initializer: xavier
+  encoder:
+    dropout: 0.0
+    embeddings:
+      dropout: 0.0
+      embedding_dim: 256
+    ff_size: 1024
+    hidden_size: 256
+    num_heads: 4
+    num_layers: 1
+    type: transformer
+  future_prediction: 10
+  gaussian_noise: true
+  initializer: xavier
+  just_count_in: false
+  noise_rate: 1.5
+  trg_size: 268
+training:
+  batch_size: 32
+  clip_grad_norm: 5.0
+  continue: false
+  decrease_factor: 0.7
+  early_stopping_metric: dtw
+  epochs: 2000
+  eval_metric: dtw
+  keep_last_ckpts: 1
+  learning_rate: 0.003
+  learning_rate_min: 0.0002
+  logging_freq: 250
+  loss: mse
+  max_output_length: 300
+  model_dir: ./T2G2P_1_4_(128, 512)
+  optimizer: adam
+  overwrite: true
+  patience: 7
+  random_seed: 27
+  scheduling: plateau
+  shuffle: true
+  use_cuda: false
+  validation_freq: 1000
+  weight_decay: 0.0

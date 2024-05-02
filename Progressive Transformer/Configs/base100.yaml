@@ -1,0 +1,63 @@
+data:
+  dev: ./sign_data/inverse/valid
+  files: files
+  max_sent_length: 80
+  skip_frames: 2
+  src: glossv2
+  src_vocab: ./sign_data/text_vocab.txt
+  test: ./sign_data/inverse/test
+  train: ./sign_data/inverse/train
+  trg: skels
+model:
+  bias_initializer: zeros
+  decoder:
+    dropout: 0.0
+    embeddings:
+      dropout: 0.0
+      embedding_dim: 128
+    ff_size: 512
+    hidden_size: 128
+    num_heads: 2
+    num_layers: 1
+    type: transformer
+  embed_initializer: xavier
+  encoder:
+    dropout: 0.0
+    embeddings:
+      dropout: 0.0
+      embedding_dim: 128
+    ff_size: 512
+    hidden_size: 128
+    num_heads: 2
+    num_layers: 1
+    type: transformer
+  future_prediction: 10
+  gaussian_noise: true
+  initializer: xavier
+  just_count_in: false
+  noise_rate: 1.5
+  trg_size: 150
+training:
+  batch_size: 32
+  clip_grad_norm: 5.0
+  continue: false
+  decrease_factor: 0.7
+  early_stopping_metric: dtw
+  epochs: 2000
+  eval_metric: dtw
+  keep_last_ckpts: 1
+  learning_rate: 0.001
+  learning_rate_min: 0.0002
+  logging_freq: 250
+  loss: mse
+  max_output_length: 300
+  model_dir: ./Models/T2P_1_2_(128, 512)
+  optimizer: adam
+  overwrite: true
+  patience: 7
+  random_seed: 27
+  scheduling: plateau
+  shuffle: true
+  use_cuda: true
+  validation_freq: 1000
+  weight_decay: 0.0
