@@ -3,9 +3,12 @@
 This is my Research Project: Effectiveness of multi-scaling keypoints for Sign Language Translation
 
 The dataset can be downloaded is PHOENIX14T dataset: https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/ 
-Due to size constraints: Example data can be found at the ExampleData Foulder
+Due to size constraints: Example data can be found at the ExampleData Foulder.
 
 
+
+
+# Generated Example
 ![Gif](wetter_wie-aussehen_morgen_28_78.gif)
 
 
