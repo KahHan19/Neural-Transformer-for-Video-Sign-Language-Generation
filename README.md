@@ -26,7 +26,7 @@ Remark: Each work contains its own Liscene and Readme File. Though the main mode
 To run the progressive Transformer: 
 - Each folder contain its own set of requirements.txt folder. To run the code, all the required libraries first need to be downloaded.
 - First download the Pheonix14T dataset. 
-- To perform DWPose Pose estimation run the DWPose_estimator.py file located in DWPose_RTMB. ( or you can run the "demo.ipynb" file on a single image, an image from Pheonix14T is also included for testing if interested )
+- To perform DWPose Pose estimation run the dw_extract.py file located in DWPose_RTMB. ( or you can run the "demo.ipynb" file on a single image, an image from Pheonix14T is also included for testing if interested )
 ![Alt Text](demo.png)
   
 - Ensure that the skeleton poses is in a file ending with ".skels", further instruction is in Progressive transformer foulder.
