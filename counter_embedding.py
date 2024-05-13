@@ -21,7 +21,7 @@ def add_counter(preprocline):
     return content
 
 
-# For Equal Scaling
+## For Equal Scaling
 
 # count = 0
 # with open(src, "r") as f:
@@ -56,7 +56,7 @@ def process_keypoints(line):
 
             processed_keypoints.extend([x, y])
     
-    return " ".join(f"{value:.4f}" for value in processed_keypoints)
+    return " ".join(f"{value}" for value in processed_keypoints)
 
 count = 0
 

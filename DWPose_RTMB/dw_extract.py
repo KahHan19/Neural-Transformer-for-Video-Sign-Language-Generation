@@ -5,6 +5,13 @@ from rtmlib import Wholebody
 import concurrent.futures
 
 
+
+##############
+
+# The code provided is similar to the one from the main paper, with the addition of reading and writing files. Similar to the demo.ipynb file
+
+###############
+
 test_folder_path = os.path.join("simple")
 test_file_path = os.path.join(test_folder_path, "test.files") # files to read from
 output_file_path = os.path.join(test_folder_path, "test.skels") # Output file for DWPose poses
@@ -18,11 +25,12 @@ wholebody = Wholebody(to_openpose=openpose_skeleton,
                       backend=backend, device=device)
 
 def process_image(image_file):
+
     img = cv2.imread(image_file)
-    if img is not None:
-        keypoints, _ = wholebody(img)
-        return image_file, np.array(keypoints).flatten()
-    return image_file, None
+    keypoints, _ = wholebody(img)
+    new_keys = np.array(keypoints).flatten()
+    return new_keys
+    
 
 with open(test_file_path, "r") as input_file, open(output_file_path, "a") as output_file:
     count = 0
@@ -35,17 +43,9 @@ with open(test_file_path, "r") as input_file, open(output_file_path, "a") as out
             if os.path.isdir(image_folder_path):  # Check if the path is a directory
                 image_files = [os.path.join(image_folder_path, f) for f in os.listdir(image_folder_path)]
 
-                with concurrent.futures.ThreadPoolExecutor() as executor:
-                    future_to_file = {executor.submit(process_image, image_file): image_file for image_file in image_files}
-                    
-                    results = {}
-                    for future in concurrent.futures.as_completed(future_to_file):
-                        results[future_to_file[future]] = future.result()
+                for img_file in image_files:
+                    keypoint = process_image(img_file)
+                    keypoints_str = " ".join(map(str, keypoint))
+                    output_file.write(keypoints_str + " ")
 
-                    sorted_results = [results[image_file] for image_file in image_files if results[image_file][1] is not None]
-
-                    for keypoints in sorted_results[1]: # Make it so that it is sorted back in sequence
-                        keypoints_str = " ".join(map(str, keypoints))
-                        output_file.write(keypoints_str + " ")
-                
-                    output_file.write("\n")
+                output_file.write("\n")
