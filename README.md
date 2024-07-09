@@ -1,4 +1,24 @@
-# Dissertation
+# Abstract
+Sign language primarily uses visual cues to commu-
+nicate. However, existing sign language translation models tend
+to neglect facial features or rely on outdated pose estimation
+models. In this paper, we propose a modern sign language
+translation model that is capable of generating facial features
+using a modern pose estimation method, DWPose. This paper
+also discusses the additional complexity facial features bring
+and the potential solution to address the set of problems. To
+enhance the model’s capability in generating sign language
+poses, various preprocessing techniques are experimented with.
+These experiments mainly focus on applying different scaling
+variations to the pose keypoints. By scaling keypoints dif-
+ferently, it affects the loss function contribution of all the
+keypoints. In a way, encourages the translation model to focus
+on learning certain features more than others. Through the
+experimentation, the impact of different scaling methods on the
+generated keypoint output is assessed. The translation model
+used in this work is based on Progressive Transformer.
+
+
 
 This is my Research Project: Effectiveness of multi-scaling keypoints for Sign Language Translation
 
