@@ -15,6 +15,11 @@ The code consists of three sections:
 - **Counter_embedding:** Adds counter values to the skeleton keypoints estimates (done right after pose estimation for the dataset).
 - **Progressive Transformer:** An adjusted version of Ben Saunders' Progressive Transformer ([saunders2020progressive](https://arxiv.org/abs/2004.14874)) to make it DWPose compatible.
 
+
+## Evaluation
+
+
+
 ### Instructions
 To run the Progressive Transformer:
 
