@@ -6,18 +6,45 @@ Sign language primarily uses visual cues to communicate. However, existing sign 
 ## Dataset
 The dataset used in this project is the PHOENIX14T dataset. You can download it from the [PHOENIX14T website](https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/). Due to size constraints, example data can be found in the ExampleData folder.
 
-## Qualititave Results Example
+## Qualititave Evaluation
+
+### Comparison with previous models
+<div align="center">
+  <img src="face/face.png" alt="Frame by frame comparison" width="400"/>
+</div>
+
+### Model Results
 <div align="center">
   <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="400"/>
 </div>
 
-The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
+- The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
 
 <div align="center">
   <img src="face/modelres.png" alt="Frame by frame comparison" width="400"/>
 </div>
 
-The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
+- The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
+
+
+
+### Best Results
+<div align="center">
+  <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="400"/>
+</div>
+
+- The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
+
+<div align="center">
+  <img src="face/modelres.png" alt="Frame by frame comparison" width="400"/>
+</div>
+
+- The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
+
+
+
+###
+
 
 
 
