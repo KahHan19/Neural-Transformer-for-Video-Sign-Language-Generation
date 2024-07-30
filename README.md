@@ -13,8 +13,7 @@ The dataset used in this project is the PHOENIX14T dataset. You can download it 
   <img src="face/face.png" alt="Frame by frame comparison" width="400"/>
 </div>
 
-Figure above presents the visual differences between both methods of sign language generation. Although the original approach(OpenPose) is successful in capturing a hand gesture and body shoulder movements. Our implementation with DWPose successfully produced an image with complete facial and body features. The total 2D keypoint value of the original PT contains 50 X, Y coordinate pairs, whereas compared to the DWPose approach, it captured a total of 134 X, Y coordinate pairs with 67 pairs dedicated to facial keypoints.
-
+- **Quality of Skeletal Keypoints**: The goal of this paper is to utilise a sign language translation model that is capable of generating additional keypoint features, As this work is based on the Saunder PT. The results of the DWPose skeleton poses will be used to compare to the OpenPose skeleton poses to demonstrate the feature and visual differences between the two models
 
 ### Best Results
 <div align="center">
@@ -42,6 +41,9 @@ Figure above presents the visual differences between both methods of sign langua
   <img src="face/extreme.png" alt="Frame by frame comparison" width="600"/>
 </div>
 
+- The **Percentage of Correct Keypoints(PCK)** score measures the percentage accuracy of the predicted pose across all the poses in the datasets. This is done by calculating the Euclidean distance between the Ground Truth keypoints and the predicted keypoints across the entire dataset. If the distance between two points is lower than a predefined threshold, then the predicted keypoints would be considered as correctly predicted. The PCK score is then calculated from the percentage of correctly predicted keypoints out of the total keypoints in the dataset. A higher PCK score indicates a closer resemblance between the predicted and ground truth poses, which suggests a better performance.
+
+- **Dynamic Time Warping(DTW)** is a technique used to measure the similarity between two sequences of data points that are indexed in time order, these sequences are normally referred as Two Time Series Data and may vary in terms of length. The similarity is useful to align the different data sequences by warping its time indices, this is useful for our keypoints data as it preserves the time order introduced in the counting embedding layer. To compute the similarity be tween the sequences, the distance matrix containing pairwise distances between the keypoints of the predicted and ground truth sequences is first constructed. Then the warping path that minimises the aggregate distance between the sequences is located. Using the warping path and distance matrices, the algorithm sum the distance matrices along the warping path to calculate the DTW distance. A smaller DTW distance represents a greater similarity between the sequences and a greater similarity results in a better matching pose sequence. DTW allow us to effectively compare sequences of different lengths, In this case, the sequences represent the skeleton keypoints of individual frames, which is important for evaluating the performance of our continuously generated output
 
 
 
