@@ -81,6 +81,18 @@ The code is divided into three sections:
 - **Counter_embedding**: Adds counter values to skeleton keypoints estimates (immediately after pose estimation).
 - **Progressive Transformer**: An adapted version of Ben Saunders' Progressive Transformer ([saunders2020progressive](https://arxiv.org/abs/2004.14874)) to be compatible with DWPose.
 
+
+## Summary
+
+This paper successfully integrates DWPose into the Progressive Transformer model, emphasizing the significance of facial features in sign language translation. By extending the Progressive Transformer to include facial features, DWPose has demonstrated substantial improvements over previous pose estimation methods. Enhancing sign language skeleton pose generation can significantly advance sign language translation, benefiting both communities and individuals interested in learning sign language.
+
+Key findings include:
+
+- **Scaling Results**: Dividing each keypoint by 100 produced the best results for skeletal keypoints. While different scaling methods influenced the loss function, models with varied scaling for facial keypoints did not meet expectations.
+- **Overfitting Issue**: Multi-scaled models tended to overfit to an “O” shape mouthing, likely due to the dataset's limited size and the frequent use of this mouth shape in sign poses. This pattern also appears in face-only models, which show improved head movement but still exhibit the “O” shape issue.
+
+
+
 ## Citations
 
 ```bibtex
