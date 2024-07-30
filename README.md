@@ -9,13 +9,6 @@ The dataset used in this project is the PHOENIX14T dataset. You can download it 
 ## Generated Example
 ![Gif](wetter_wie-aussehen_morgen_28_78.gif)
 
-## Information about the Code
-The code consists of three sections:
-- **DWPose_RTMB:** This is the rtmlib from Jiang, Tao ([GitHub Repository](https://github.com/Tau-J/rtmlib)). This part of the code performs DWPose and draws the skeletal keypoints for the poses. Note that the code was also changed to make it compatible with our project.
-- **Counter_embedding:** Adds counter values to the skeleton keypoints estimates (done right after pose estimation for the dataset).
-- **Progressive Transformer:** An adjusted version of Ben Saunders' Progressive Transformer ([saunders2020progressive](https://arxiv.org/abs/2004.14874)) to make it DWPose compatible.
-
-
 ## Evaluation
 
 
@@ -34,6 +27,23 @@ To run the Progressive Transformer:
 8. Run the `training.py` file in the Progressive Transformer folder (make sure the correct config is utilized, as noted in the #Change here# section).
 
 - Note: `dw_plot_video.py` is important for drawing skeleton poses for DWPose. It uses code from rtmlib ([GitHub Repository](https://github.com/Tau-J/rtmlib)) and is implemented to be compatible with the transformer.
+
+
+
+
+## Information about the Code
+The code consists of three sections:
+- **DWPose_RTMB:** This is the rtmlib from Jiang, Tao ([GitHub Repository](https://github.com/Tau-J/rtmlib)). This part of the code performs DWPose and draws the skeletal keypoints for the poses. Note that the code was also changed to make it compatible with our project.
+- **Counter_embedding:** Adds counter values to the skeleton keypoints estimates (done right after pose estimation for the dataset).
+- **Progressive Transformer:** An adjusted version of Ben Saunders' Progressive Transformer ([saunders2020progressive](https://arxiv.org/abs/2004.14874)) to make it DWPose compatible.
+
+
+
+
+
+
+
+
 
 ## Citations
 
