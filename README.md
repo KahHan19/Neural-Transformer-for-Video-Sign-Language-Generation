@@ -18,13 +18,13 @@ Figure above presents the visual differences between both methods of sign langua
 
 ### Best Results
 <div align="center">
-  <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="400"/>
+  <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="500"/>
 </div>
 
 - The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
 
 <div align="center">
-  <img src="face/compare.png" alt="Frame by frame comparison" width="400"/>
+  <img src="face/compare.png" alt="Frame by frame comparison" width="500"/>
 </div>
 
 - Generated Skeleton comparison for the gloss ”wetter wie aussehen morgen”, (a) Lowest DTW and Lowest PCK Model 100-100, (b) Highest PCK and Highest DTW Model 100-0.
