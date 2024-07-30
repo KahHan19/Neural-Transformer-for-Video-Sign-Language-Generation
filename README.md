@@ -43,6 +43,20 @@ The dataset used is the PHOENIX14T dataset. You can download it from the [PHOENI
 
 - **Dynamic Time Warping (DTW)**: DTW compares two time-ordered sequences by aligning them through time warping. It calculates similarity by finding the warping path that minimizes the total distance between sequences. A smaller DTW distance indicates higher similarity, essential for evaluating the accuracy of keypoint sequences in pose predictions.
 
+### 5.1.2. Equal Scaling Results
+- **Models Tested**: Denoted as “poseX”, where “X” represents the scaling value of the entire skeleton pose (tested with values 25 and 100).
+- **Findings**: The “pose100” model, with a scaling value of 100, converged faster and performed better across all metrics compared to the “pose25” model.
+- **Note**: Models trained with scaling values other than 100 had significantly higher loss values and longer convergence times, making them impractical for training. Therefore, “pose100” is preferred for its superior performance.
+
+### 5.1.3. Multi-Scaling Results
+- **Models Tested**: Denoted as “x-y”, where “x” represents scaling for body keypoints and “y” represents scaling for facial features. The body keypoints were scaled by 100, while “y” varied to test its effect.
+- **Findings**: 
+  - **100-100**: Baseline model with equal scaling for body and facial keypoints.
+  - **100-0**: Extreme case where facial keypoints were not scaled down, forcing the model to focus on learning facial features.
+  - **100-25** and **100-50**: Intermediate scaling ratios to assess their impact on performance.
+- **Evaluation Metrics**: The effects of different scaling parameters were compared using Loss Functions, Dynamic Time Warping (DTW), and Percentage of Correct Keypoints (PCK).
+
+
 ## Instructions
 To run the Progressive Transformer:
 
