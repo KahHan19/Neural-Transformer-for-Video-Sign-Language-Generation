@@ -1,5 +1,8 @@
 # Effectiveness of Multi-Scaling Keypoints for Sign Language Translation
 
+The content below summarizes the original work. For the full details, please refer to: [Link to PDF](nu/KahHanChiaDissertation.pdf)
+
+
 ## Abstract
 Sign language primarily relies on visual cues for communication. Existing sign language translation models often overlook facial features or use outdated pose estimation models. We propose a modern sign language translation model using DWPose for facial feature generation. This paper addresses the added complexity of facial features and explores solutions for these challenges. We experiment with various preprocessing techniques to enhance the model’s ability to generate sign language poses, focusing on different scaling variations of pose keypoints. These scaling variations affect the contribution of keypoints to the loss function, guiding the model to prioritize certain features. We evaluate the impact of these scaling methods on keypoint outputs using the Progressive Transformer model.
 
