@@ -27,7 +27,7 @@ Figure above presents the visual differences between both methods of sign langua
   <img src="face/compare.png" alt="Frame by frame comparison" width="400"/>
 </div>
 
--Generated Skeleton comparison for the gloss ”wetter wie aussehen morgen”, (a) Lowest DTW and Lowest PCK Model 100-100, (b) Highest PCK and Highest DTW Model 100-0.
+- Generated Skeleton comparison for the gloss ”wetter wie aussehen morgen”, (a) Lowest DTW and Lowest PCK Model 100-100, (b) Highest PCK and Highest DTW Model 100-0.
 
 
 
