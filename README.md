@@ -57,10 +57,6 @@ The dataset used is the PHOENIX14T dataset. You can download it from the [PHOENI
   <img src="face/extreme.png" alt="Frame by frame comparison" width="600"/>
 </div>
 
-<div align="center">
-  <img src="face/tablesres" alt="Frame by frame comparison" width="600"/>
-</div>
-
 
 - **Percentage of Correct Keypoints (PCK)**: PCK measures the accuracy of predicted keypoints by comparing them to ground truth keypoints. It calculates the percentage of keypoints within a predefined distance threshold from their true positions. A higher PCK score indicates better alignment between predicted and true poses.
 
