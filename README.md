@@ -32,7 +32,23 @@ Figure above presents the visual differences between both methods of sign langua
 
 
 
-## Evaluation
+## Quantitative Evaluation
+<div align="center">
+  <img src="face/tables.png" alt="Frame by frame comparison" width="400"/>
+</div>
+
+
+<div align="center">
+  <img src="face/extreme.png" alt="Frame by frame comparison" width="400"/>
+</div>
+
+
+
+
+
+
+
+
 
 
 
