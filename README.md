@@ -1,12 +1,12 @@
 # Effectiveness of Multi-Scaling Keypoints for Sign Language Translation
-
-
 <div align="center">
   <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="600"/>
 </div>
 
-
-The content below summarizes the original work. For the full details, please refer to: [Link to PDF](nu/KahHanChiaDissertation.pdf)
+<p align="center">
+  <strong>For the full details, please refer to the complete dissertation:</strong><br>
+  <a href="nu/KahHanChiaDissertation.pdf" style="font-size: 18px; color: #1E90FF;">Download the PDF</a>
+</p>
 
 
 ## Table of Contents
