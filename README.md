@@ -1,85 +1,68 @@
 # Effectiveness of Multi-Scaling Keypoints for Sign Language Translation
 
 ## Abstract
-Sign language primarily uses visual cues to communicate. However, existing sign language translation models tend to neglect facial features or rely on outdated pose estimation models. In this project, we propose a modern sign language translation model that generates facial features using a modern pose estimation method, DWPose. This paper discusses the additional complexity facial features bring and potential solutions to address these challenges. We experiment with various preprocessing techniques to enhance the model’s capability in generating sign language poses, focusing on different scaling variations to the pose keypoints. By scaling keypoints differently, the loss function contribution of all the keypoints is affected, encouraging the translation model to focus on learning certain features more than others. Through experimentation, we assess the impact of different scaling methods on the generated keypoint output. The translation model used in this work is based on the Progressive Transformer.
+Sign language primarily relies on visual cues for communication. Existing sign language translation models often overlook facial features or use outdated pose estimation models. We propose a modern sign language translation model using DWPose for facial feature generation. This paper addresses the added complexity of facial features and explores solutions for these challenges. We experiment with various preprocessing techniques to enhance the model’s ability to generate sign language poses, focusing on different scaling variations of pose keypoints. These scaling variations affect the contribution of keypoints to the loss function, guiding the model to prioritize certain features. We evaluate the impact of these scaling methods on keypoint outputs using the Progressive Transformer model.
 
 ## Dataset
-The dataset used in this project is the PHOENIX14T dataset. You can download it from the [PHOENIX14T website](https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/). Due to size constraints, example data can be found in the ExampleData folder.
+The dataset used is the PHOENIX14T dataset. You can download it from the [PHOENIX14T website](https://www-i6.informatik.rwth-aachen.de/~koller/RWTH-PHOENIX-2014-T/). For convenience, example data is available in the ExampleData folder.
 
-## Qualititave Evaluation
+## Qualitative Evaluation
 
-### Comparison with previous models
+### Comparison with Previous Models
 <div align="center">
   <img src="face/face.png" alt="Frame by frame comparison" width="400"/>
 </div>
 
-- **Quality of Skeletal Keypoints**: The goal of this paper is to utilise a sign language translation model that is capable of generating additional keypoint features, As this work is based on the Saunder PT. The results of the DWPose skeleton poses will be used to compare to the OpenPose skeleton poses to demonstrate the feature and visual differences between the two models
+- **Quality of Skeletal Keypoints**: This paper aims to utilize a sign language translation model capable of generating additional keypoint features. We compare the DWPose skeleton poses with OpenPose skeleton poses to highlight feature and visual differences.
 
 ### Best Results
 <div align="center">
   <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="400"/>
 </div>
 
-- The figure above showcases the model's results by comparing the ground truth poses with the predicted poses.
+- The figure above compares the ground truth poses with the predicted poses.
 
 <div align="center">
   <img src="face/compare.png" alt="Frame by frame comparison" width="400"/>
 </div>
 
-- Generated Skeleton comparison for the gloss ”wetter wie aussehen morgen”, (a) Lowest DTW and Lowest PCK Model 100-100, (b) Highest PCK and Highest DTW Model 100-0.
-
-
-
+- Comparison of generated skeletons for the gloss "wetter wie aussehen morgen":
+  - (a) Lowest DTW and Lowest PCK Model (100-100)
+  - (b) Highest PCK and Highest DTW Model (100-0)
 
 ## Quantitative Evaluation
 <div align="center">
   <img src="face/tables.png" alt="Frame by frame comparison" width="600"/>
 </div>
 
-
 <div align="center">
   <img src="face/extreme.png" alt="Frame by frame comparison" width="600"/>
 </div>
 
-- **Percentage of Correct Keypoints (PCK)**: PCK measures the accuracy of predicted keypoints by comparing them to ground truth keypoints across the dataset. It calculates the percentage of keypoints within a predefined distance threshold from their true positions. A higher PCK score indicates better alignment between predicted and true poses, reflecting improved model performance.
+- **Percentage of Correct Keypoints (PCK)**: PCK measures the accuracy of predicted keypoints by comparing them to ground truth keypoints. It calculates the percentage of keypoints within a predefined distance threshold from their true positions. A higher PCK score indicates better alignment between predicted and true poses.
 
-- **Dynamic Time Warping (DTW)**: DTW compares two time-ordered sequences by aligning them through time warping. It calculates the similarity between sequences by finding the warping path that minimizes the total distance between them. A smaller DTW distance indicates higher similarity, which is crucial for evaluating the accuracy of keypoint sequences in our pose predictions.
+- **Dynamic Time Warping (DTW)**: DTW compares two time-ordered sequences by aligning them through time warping. It calculates similarity by finding the warping path that minimizes the total distance between sequences. A smaller DTW distance indicates higher similarity, essential for evaluating the accuracy of keypoint sequences in pose predictions.
 
-
-
-
-
-### Instructions
+## Instructions
 To run the Progressive Transformer:
 
-1. Each folder contains its own `requirements.txt` file. To run the code, all the required libraries need to be downloaded first.
+1. Each folder contains its own `requirements.txt` file. Install all required libraries first.
 2. Download the PHOENIX14T dataset.
-3. Perform DWPose pose estimation by running the `dw_extract.py` file located in the DWPose_RTMB folder (or you can run the `demo.ipynb` file on a single image; an image from PHOENIX14T is also included for testing if interested).
+3. Perform DWPose pose estimation by running `dw_extract.py` in the DWPose_RTMB folder (or use `demo.ipynb` for a single image; an example image from PHOENIX14T is provided).
    ![Alt Text](demo.png)
-4. Ensure that the skeleton poses are in a file ending with ".skels" (further instructions are in the Progressive Transformer folder).
-5. Pass the skeleton ".skels" file into the `counter_embedding.py` file to perform counter embedding. Make sure to do this for each dataset.
-6. Adjust the configuration file as needed. Make sure that you have `.skels`, `.file`, and `.gloss` for all training, validation, and test sets (as shown in the ExampleData folder).
-7. Put all the files into the `sign_data` folder in the Progressive Transformer folder (adjust the `dw_plot_video.py` scaling value according to the normalization done to keypoints).
-8. Run the `training.py` file in the Progressive Transformer folder (make sure the correct config is utilized, as noted in the #Change here# section).
+4. Ensure skeleton poses are in a file ending with ".skels" (instructions available in the Progressive Transformer folder).
+5. Pass the ".skels" file to `counter_embedding.py` for counter embedding. Repeat for each dataset.
+6. Adjust the configuration file as needed. Ensure you have `.skels`, `.file`, and `.gloss` for all training, validation, and test sets (as shown in the ExampleData folder).
+7. Place all files into the `sign_data` folder in the Progressive Transformer directory (adjust the `dw_plot_video.py` scaling value according to keypoint normalization).
+8. Run `training.py` in the Progressive Transformer folder (ensure the correct configuration is used as noted in the #Change here# section).
 
-- Note: `dw_plot_video.py` is important for drawing skeleton poses for DWPose. It uses code from rtmlib ([GitHub Repository](https://github.com/Tau-J/rtmlib)) and is implemented to be compatible with the transformer.
-
-
-
+**Note**: `dw_plot_video.py` is used for drawing skeleton poses for DWPose. It utilizes code from rtmlib ([GitHub Repository](https://github.com/Tau-J/rtmlib)) and is adapted for compatibility with the transformer.
 
 ## Information about the Code
-The code consists of three sections:
-- **DWPose_RTMB:** This is the rtmlib from Jiang, Tao ([GitHub Repository](https://github.com/Tau-J/rtmlib)). This part of the code performs DWPose and draws the skeletal keypoints for the poses. Note that the code was also changed to make it compatible with our project.
-- **Counter_embedding:** Adds counter values to the skeleton keypoints estimates (done right after pose estimation for the dataset).
-- **Progressive Transformer:** An adjusted version of Ben Saunders' Progressive Transformer ([saunders2020progressive](https://arxiv.org/abs/2004.14874)) to make it DWPose compatible.
-
-
-
-
-
-
-
-
+The code is divided into three sections:
+- **DWPose_RTMB**: Uses rtmlib from Jiang, Tao ([GitHub Repository](https://github.com/Tau-J/rtmlib)) for DWPose and skeleton keypoint drawing. Modified for project compatibility.
+- **Counter_embedding**: Adds counter values to skeleton keypoints estimates (immediately after pose estimation).
+- **Progressive Transformer**: An adapted version of Ben Saunders' Progressive Transformer ([saunders2020progressive](https://arxiv.org/abs/2004.14874)) to be compatible with DWPose.
 
 ## Citations
 
