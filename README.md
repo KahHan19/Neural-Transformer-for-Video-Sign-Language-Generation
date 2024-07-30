@@ -41,14 +41,9 @@ The dataset used in this project is the PHOENIX14T dataset. You can download it 
   <img src="face/extreme.png" alt="Frame by frame comparison" width="600"/>
 </div>
 
-- The **Percentage of Correct Keypoints(PCK)** score measures the percentage accuracy of the predicted pose across all the poses in the datasets. This is done by calculating the Euclidean distance between the Ground Truth keypoints and the predicted keypoints across the entire dataset. If the distance between two points is lower than a predefined threshold, then the predicted keypoints would be considered as correctly predicted. The PCK score is then calculated from the percentage of correctly predicted keypoints out of the total keypoints in the dataset. A higher PCK score indicates a closer resemblance between the predicted and ground truth poses, which suggests a better performance.
+- **Percentage of Correct Keypoints (PCK)**: PCK measures the accuracy of predicted keypoints by comparing them to ground truth keypoints across the dataset. It calculates the percentage of keypoints within a predefined distance threshold from their true positions. A higher PCK score indicates better alignment between predicted and true poses, reflecting improved model performance.
 
-- **Dynamic Time Warping(DTW)** is a technique used to measure the similarity between two sequences of data points that are indexed in time order, these sequences are normally referred as Two Time Series Data and may vary in terms of length. The similarity is useful to align the different data sequences by warping its time indices, this is useful for our keypoints data as it preserves the time order introduced in the counting embedding layer. To compute the similarity be tween the sequences, the distance matrix containing pairwise distances between the keypoints of the predicted and ground truth sequences is first constructed. Then the warping path that minimises the aggregate distance between the sequences is located. Using the warping path and distance matrices, the algorithm sum the distance matrices along the warping path to calculate the DTW distance. A smaller DTW distance represents a greater similarity between the sequences and a greater similarity results in a better matching pose sequence. DTW allow us to effectively compare sequences of different lengths, In this case, the sequences represent the skeleton keypoints of individual frames, which is important for evaluating the performance of our continuously generated output
-
-
-
-
-
+- **Dynamic Time Warping (DTW)**: DTW compares two time-ordered sequences by aligning them through time warping. It calculates the similarity between sequences by finding the warping path that minimizes the total distance between them. A smaller DTW distance indicates higher similarity, which is crucial for evaluating the accuracy of keypoint sequences in our pose predictions.
 
 
 
