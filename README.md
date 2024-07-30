@@ -13,6 +13,9 @@ The dataset used in this project is the PHOENIX14T dataset. You can download it 
   <img src="face/face.png" alt="Frame by frame comparison" width="400"/>
 </div>
 
+Figure above presents the visual differences between both methods of sign language generation. Although the original approach(OpenPose) is successful in capturing a hand gesture and body shoulder movements. Our implementation with DWPose successfully produced an image with complete facial and body features. The total 2D keypoint value of the original PT contains 50 X, Y coordinate pairs, whereas compared to the DWPose approach, it captured a total of 134 X, Y coordinate pairs with 67 pairs dedicated to facial keypoints.
+
+
 ### Model Results
 <div align="center">
   <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="400"/>
