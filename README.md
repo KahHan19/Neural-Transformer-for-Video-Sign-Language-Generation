@@ -1,5 +1,11 @@
 # Effectiveness of Multi-Scaling Keypoints for Sign Language Translation
 
+
+<div align="center">
+  <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="600"/>
+</div>
+
+
 The content below summarizes the original work. For the full details, please refer to: [Link to PDF](nu/KahHanChiaDissertation.pdf)
 
 
@@ -19,12 +25,6 @@ The dataset used is the PHOENIX14T dataset. You can download it from the [PHOENI
 - **Quality of Skeletal Keypoints**: This paper aims to utilize a sign language translation model capable of generating additional keypoint features. We compare the DWPose skeleton poses with OpenPose skeleton poses to highlight feature and visual differences.
 
 ### Best Results
-<div align="center">
-  <img src="wetter_wie-aussehen_morgen_28_78.gif" alt="Frame by frame comparison" width="400"/>
-</div>
-
-- The figure above compares the ground truth poses with the predicted poses.
-
 <div align="center">
   <img src="face/compare.png" alt="Frame by frame comparison" width="400"/>
 </div>
