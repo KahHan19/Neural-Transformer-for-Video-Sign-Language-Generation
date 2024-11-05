@@ -5,7 +5,7 @@
 
 <p align="center">
   <strong>For the full details, please refer to the complete dissertation:</strong><br>
-  <a href="nu/KahHanChiaDissertation.pdf" style="font-size: 18px; color: #1E90FF;">Download the PDF</a>
+  <a href="KahHanChiaDissertation.pdf" style="font-size: 18px; color: #1E90FF;">Download the PDF</a>
 </p>
 
 
